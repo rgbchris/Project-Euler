@@ -1,5 +1,4 @@
-
 Project Euler
 =============
 
-Solving algorithms with JavaScript for fun! 
+My early endeavors of JavaScript involve solving mathematical/computational algorithms! 
