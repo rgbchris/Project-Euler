@@ -1,9 +1,5 @@
 <!-- Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum. -->
 
-<html>
-<body>
-<script>
-	
 	function divisible() {
 		
 		var sumOfSquares = 0;
@@ -34,6 +30,3 @@
 		divisible();
 	}
 	
-</script>
-</body>
-</html>
