@@ -1,9 +1,5 @@
 <!-- Find the largest palindrome made from the product of two 3-digit numbers. -->
 
-<html>
-<body>
-<script>
-	
 	function palindrome(){
 		
 		var total = new Array();
@@ -32,7 +28,5 @@
 	window.onload = function(){
 		palindrome();
 	}
-	
-</script>
-</body>
-</html>
+
+
