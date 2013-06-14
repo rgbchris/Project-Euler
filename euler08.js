@@ -1,9 +1,5 @@
 <!-- Find the greatest product of five consecutive digits in the 1000-digit number. -->
 
-<html>
-<body>
-<script>
-	
 	function greatestProduct() {
 	
 		var z = "73167176531330624919225119674426574742355349194934" +
@@ -42,6 +38,3 @@
 		greatestProduct();
 	}
 	
-</script>
-</body>
-</html>
