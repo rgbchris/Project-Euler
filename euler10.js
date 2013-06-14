@@ -1,9 +1,5 @@
 <!-- Find the sum of all the primes below two million. -->
 
-<html>
-<body>
-<script>
-	
 	window.onload = function(){
 		var tots = 0;
 		for (var i = 2; i <= 2000000; i++) { 	
@@ -25,6 +21,3 @@
 		
 	}
 	
-</script>
-</body>
-</html>
