@@ -1,9 +1,5 @@
 <!-- There exists exactly one Pythagorean triplet for which a + b + c = 1000. Find the product abc. -->
 
-<html>
-<body>
-<script>
-	
 	function pythagorean() {
 
 	var answer;
@@ -26,7 +22,3 @@
 	window.onload = function(){
 		pythagorean();
 	}
-	
-</script>
-</body>
-</html>
