@@ -1,10 +1,5 @@
 <!-- What is the value of the first triangle number to have over five hundred divisors? -->
 
-<html>
-<body>
-<script>
-	
-	
 	function triNum(max){
 		
 		var	wholeNum = new RegExp(/^\s*\d+\s*$/);
@@ -38,7 +33,3 @@
 	}
 	
 	// Right now we are getting the 20000th triangle number
-
-</script>
-</body>
-</html>
