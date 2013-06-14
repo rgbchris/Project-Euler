@@ -1,9 +1,5 @@
 <!-- What is the largest prime factor of the number 600851475143? -->
 
-<html>
-<body>
-<script>
-
 	var	$wholeNum = new RegExp(/^\s*\d+\s*$/);
 	
 	function primeFactor(max) {
@@ -28,6 +24,3 @@
 		primeFactor(600851475143);
 	}
 	
-</script>
-</body>
-</html>
