@@ -1,9 +1,5 @@
 <!-- What is the greatest product of four adjacent numbers in any direction (up, down, left, right, or diagonally) in the 20×20 grid? -->
 
-<html>
-<body>
-<script>
-	
 	window.onload = function(){
 		var a = "0802229738150040007504050778521250779108" + // 39
 		 		"4949994017811857608717409843694804566200" + 
@@ -70,6 +66,3 @@
 	
 	}
 	
-</script>
-</body>
-</html>
