@@ -1,9 +1,4 @@
 <!-- What is the 10,001st prime number? -->
-
-<html>
-<body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script>
 	
 	function primeNum(max) {
 	
@@ -37,6 +32,3 @@
 		primeNum(199999);
 	}
 	
-</script>
-</body>
-</html>
