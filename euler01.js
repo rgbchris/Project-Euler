@@ -1,7 +1,4 @@
 <!-- Find the sum of all the multiples of 3 or 5 below 1000. -->
-<html>
-<body>
-<script>
 var i = 1;
 var $wholeNum = new RegExp(/^\s*\d+\s*$/);
 var $sum = 0;
@@ -15,6 +12,3 @@ for (i = 1; i < 1000; i ++) {
 console.log("The total is " + $sum);
 
 
-</script>
-</body>
-</html>
