@@ -1,9 +1,6 @@
 <!-- By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms. -->
 
-<html>
-<body>
-<script>
-var i,
+    var i,
 	$sum = 0,
 	$var1 = 0,
 	$var2 = 1,
@@ -34,6 +31,3 @@ var i,
 		
 	console.log($sum);	
 
-</script>
-</body>
-</html>
