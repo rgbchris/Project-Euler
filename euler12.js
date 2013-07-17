@@ -1,4 +1,4 @@
-<!-- What is the value of the first triangle number to have over five hundred divisors? -->
+// What is the value of the first triangle number to have over five hundred divisors?
 
 	function triNum(max){
 		
@@ -17,7 +17,7 @@
 				if(wholeNum.test(tris[x]/n)) { // which ones of those numbers divide evenly into the tri num
 					factors[factors.length++] = n;
 					if (factors.length > 500) {
-						alert(tris[x]);
+						return(tris[x]);
 					}
 				}
 			}
@@ -27,9 +27,6 @@
 	}
 	
 	
-	window.onload = function(){	
-		console.log(triNum(20000));
-		//alert(Math.sqrt(100));
-	}
 	
-	// Right now we are getting the 20000th triangle number
+		console.log(triNum(20000));
+
