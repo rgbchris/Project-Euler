@@ -1,14 +1,24 @@
-<!-- Find the sum of all the multiples of 3 or 5 below 1000. -->
-var i = 1;
-var $wholeNum = new RegExp(/^\s*\d+\s*$/);
-var $sum = 0;
+/**
+ * Project Euler Problem # 001
+ * 
+ * PROBLEM DESCRIPTION:
+ *
+ * Find the sum of all the multiples of 3 or 5 below 1000.
+ *
+ */
+
+// Load Modules
+var time = require('./timer'),
+		math = require('./math'),
+		helpers = require('./helpers');
+
+
+var i, sum = 0;
 
 for (i = 1; i < 1000; i ++) {
-	if ($wholeNum.test(i / 3) || $wholeNum.test(i / 5)) { 
-		$sum = $sum + i;
+	if (math.isWholeNum(i / 3) || math.isWholeNum(i / 5)) { 
+		sum = sum + i;
 	}
 }
 
-console.log("The total is " + $sum);
-
-
+time.print(sum);

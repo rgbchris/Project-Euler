@@ -1,8 +1,18 @@
-<!-- Find the greatest product of five consecutive digits in the 1000-digit number. -->
+/**
+ * Project Euler Problem #008
+ * 
+ * PROBLEM DESCRIPTION:
+ *
+ * Find the greatest product of five consecutive digits in the 1000-digit number.
+ */
 
-	function greatestProduct() {
+// Load Modules
+var _time = require('./timer'),
+		_math = require('./math'),
+		_helpers = require('./helpers'),
+		put = console.log.bind(console);
 	
-		var z = "73167176531330624919225119674426574742355349194934" +
+var z = "73167176531330624919225119674426574742355349194934" +
 				"96983520312774506326239578318016984801869478851843" +
 				"85861560789112949495459501737958331952853208805511" +
 				"12540698747158523863050715693290963295227443043557" + 
@@ -23,18 +33,13 @@
 				"05886116467109405077541002256983155200055935729725" +
 				"71636269561882670428252483600823257530420752963450";
 
-		var nums = [];
+var nums = [], val;
 		
-		for(i = 0; i <= 994; i++){
-			nums[nums.length++] = parseInt( z.charAt(i) * z.charAt(i + 1) * z.charAt(i + 2) * z.charAt(i + 3) * z.charAt(i + 4) );
-		}
+for (i = 0; i <= 1000; i++) {
+	nums.push( parseInt( z.charAt(i) * z.charAt(i + 1) * z.charAt(i + 2) * z.charAt(i + 3) * z.charAt(i + 4) ) );
+}
 		
-		var largest = Math.max.apply(Math, nums);
+val = _helpers.arrayMax(nums);
 		
-		console.log( largest );
-	}	
-		
-	window.onload = function(){
-		greatestProduct();
-	}
+_time.print(val);
 	

@@ -1,26 +1,24 @@
-<!-- What is the largest prime factor of the number 600851475143? -->
+/**
+ * Project Euler Problem # 003
+ * 
+ * PROBLEM DESCRIPTION:
+ *
+ * What is the largest prime factor of the number 600851475143?
+ *
+ */
 
-	var	$wholeNum = new RegExp(/^\s*\d+\s*$/);
-	
-	function primeFactor(max) {
-		for (var i = 2; i <= max; i++) { // loop through all numbers
-				var $isPrime = true;
-				for (var j = 2; j < i; j++) {
-					if (i % j == 0) {
-						$isPrime = false;
-						break;
-					} 
-				}
-				
-			if($isPrime) {
-				if ($wholeNum.test(max / i)) { 
-					console.log(i + "<br/>");
-				}
-			}
-		}
-	}
-	
-	window.onload = function () {
-		primeFactor(600851475143);
-	}
+// Load Modules
+var time = require('./timer'),
+		math = require('./math'),
+		helpers = require('./helpers'),
+		put = console.log.bind(console);
+
+// Generate Prime Factors
+var val = math.getPrimeFactors(600851475143);	
+
+// Find max Prime Factor
+val = Array.max(val);
+
+time.print(val);
+
 	

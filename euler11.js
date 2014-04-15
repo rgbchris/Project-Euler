@@ -1,7 +1,22 @@
-<!-- What is the greatest product of four adjacent numbers in any direction (up, down, left, right, or diagonally) in the 20×20 grid? -->
+/**
+ * Project Euler Problem # 011
+ * 
+ * PROBLEM DESCRIPTION:
+ *
+ * What is the greatest product of four adjacent numbers 
+ * in any direction (up, down, left, right, or diagonally) 
+ * in the 20×20 grid?
+ */
 
-	window.onload = function(){
-		var a = "0802229738150040007504050778521250779108" + // 39
+// Load Modules
+var _time = require('./timer'),
+		_math = require('./math'),
+		_helpers = require('./helpers'),
+		put = console.log.bind(console);
+
+var val;
+
+var a = "0802229738150040007504050778521250779108" + 
 		 		"4949994017811857608717409843694804566200" + 
 				"8149317355791429937140675388300349133665" + 
 				"5270952304601142692468560132567137023691" + 
@@ -20,11 +35,11 @@
 				"0442167338253911249472180846293240627636" +
 				"2069364172302388346299698267598574043616" +
 				"2073352978319001743149714886811623570554" +
-				"0170547183515469169233486143520189196748"; // 800
+				"0170547183515469169233486143520189196748"; 
 	
 		var nums = [];
 	
-		for(i = 0; i < 800; i+=2 ){	
+		for (i = 0; i < 800; i += 2 ) {	
 			nums[nums.length++] = Number(a.charAt(i) + a.charAt(i+1)) * Number(a.charAt(i+2) + a.charAt(i+3)) 
 								* Number(a.charAt(i+4) + a.charAt(i+5)) * Number(a.charAt(i+6) + a.charAt(i+7)); // RIGHT ++ GOOD
 								
@@ -52,17 +67,13 @@
 		
 		var total = [];
 		
-		for(x=0; x<3200; x++){
-			if( isNaN(nums[x]) == false){
-				total[total.length++] = nums[x];
+		for (x = 0; x < 3200; x++) {
+			if ( isNaN(nums[x]) == false) {
+				total.push(nums[x]);
 			}
 		}
 	
-		var largestNum = Math.max.apply(Math, total);
-		
-		// answer is 70 600 674
-		
-		console.log(largestNum);
+		val = _helpers.arrayMax(total);
+
 	
-	}
-	
+_time.print(val);

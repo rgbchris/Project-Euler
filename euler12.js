@@ -1,32 +1,36 @@
-// What is the value of the first triangle number to have over five hundred divisors?
+/**
+ * Project Euler Problem # 012
+ * 
+ * PROBLEM DESCRIPTION:
+ *
+ * What is the value of the first triangle 
+ * number to have over five hundred divisors?
+ */
 
-	function triNum(max){
-		
-		var	wholeNum = new RegExp(/^\s*\d+\s*$/);
-		var tris = [];
-		var num = 0;
-		var factors = [];
-		
-		for( i = 0; i < max; i++) { // gives "max" number of triangle numbers
-			num = num + i;
-			tris[tris.length++] = num;
-		}
+// Load Modules
+var _time = require('./timer'),
+		_math = require('./math'),
+		_helpers = require('./helpers'),
+		put = console.log.bind(console);
 
-		for(x = 19999; x < max; x++) { // iterate through triangle numbers
-			for( n = 1; n <= tris[x]; n++ ) { // iterate through numbers less than or equal to triangle numbers
-				if(wholeNum.test(tris[x]/n)) { // which ones of those numbers divide evenly into the tri num
-					factors[factors.length++] = n;
-					if (factors.length > 500) {
-						return(tris[x]);
-					}
-				}
-			}
-		}
-		
-		
-	}
-	
-	
-	
-		console.log(triNum(20000));
+var val;
 
+var i = 1;
+
+while (true) {
+
+  var tri_num = _math.generate_nth_triangle_number(i);
+
+  var factor_arr = _math.getFactors(tri_num);
+
+  // if over 500 divisors 
+  if (factor_arr.length > 500) { 
+    val = tri_num; 
+    break;
+  } else {
+    i++;
+  }
+
+}
+	
+_time.print(val);

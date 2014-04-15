@@ -1,32 +1,40 @@
-<!-- Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum. -->
+/**
+ * Project Euler Problem # 006
+ * 
+ * PROBLEM DESCRIPTION:
+ *
+ * Find the difference between the sum of the 
+ * squares of the first one hundred natural numbers 
+ * and the square of the sum.
+ *
+ */
 
-	function divisible() {
-		
-		var sumOfSquares = 0;
-		var squareOfSums = 0;
-		
-		function sumOfSquareF() {	
-			for (var i = 1; i <= 100; i++ ) {
-				sumOfSquares = sumOfSquares + Math.pow(i,2);
-			}
-			return sumOfSquares;
+// Load Modules
+var _time = require('./timer'),
+		_math = require('./math'),
+		_helpers = require('./helpers'),
+		put = console.log.bind(console);
+
+var val,
+		sumOfSquares = 0,
+		squareOfSums = 0;
+	
+	function sumOfSquareF() {	
+		for (var i = 1; i <= 100; i++ ) {
+			sumOfSquares = sumOfSquares + Math.pow(i,2);
 		}
-	
-		function squareOfSumsF() {
-			for (var i = 1; i <= 100; i++ ) {
-				squareOfSums = squareOfSums + i;
-			}
-			var squareOfSumsTotal = Math.pow(squareOfSums,2);
-			return squareOfSumsTotal;
+		return sumOfSquares;
+	}
+
+	function squareOfSumsF() {
+		for (var i = 1; i <= 100; i++ ) {
+			squareOfSums = squareOfSums + i;
 		}
-			
-		var totalValue = squareOfSumsF() - sumOfSquareF();
+		var squareOfSumsTotal = Math.pow(squareOfSums,2);
+		return squareOfSumsTotal;
+	}
 		
-		console.log(totalValue);
+	val = squareOfSumsF() - sumOfSquareF();
+
 	
-	}
-	
-	window.onload = function(){
-		divisible();
-	}
-	
+_time.print(val);
